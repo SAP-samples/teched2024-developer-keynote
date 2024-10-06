@@ -4,14 +4,6 @@
 
 Hear from the developer advocates for a quick injection of news, recaps, and deep-dive demos covering various announcements from the event as well as other fun stuff.
 
-## Overview
-
-This session introduces attendees to...
-
-## Requirements
-
-The requirements to follow the exercises in this repository are...
-
 ## Topics
 
 ### JavaScript SDK & SAP Gen AI Hub
@@ -59,8 +51,6 @@ In this demo, we will explore how you can create Derived Business Events using t
 ### Full-stack app following the SAP BTP Developer's Guide
 
 The easy-ui5 project generator (open source) is a great tool to kickstart UI5 projects. It now also includes a subgenerator for SAP CAP projects, so developers can create a full-stack app that is instantly deployable to SAP BTP within a few minutes. There is no more manual work required when it comes to proxys, the approuter, destinations or the mta.yaml (previously that was quite the hassle). The generated full-stack app follows the suggestions from the SAP BTP Developer's Guide, using SAP CAP, UI5/Fiori elements and SAP BTP.
-
-
 
 ## Contributing
 
