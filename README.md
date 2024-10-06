@@ -1,8 +1,8 @@
-# Session ID - Session Title
+# SAP TechEd 2024 Developer keynote [deconstructed]: Keeping the promise
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2024 session called Session ID - Session Title.  
+Hear from the developer advocates for a quick injection of news, recaps, and deep-dive demos covering various announcements from the event as well as other fun stuff.
 
 ## Overview
 
@@ -12,31 +12,62 @@ This session introduces attendees to...
 
 The requirements to follow the exercises in this repository are...
 
-## Exercises
+## Topics
 
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
+### JavaScript SDK & SAP Gen AI Hub
 
-- [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+The JavaScript SDK allows developers to seamlessly integrate into SAP generative AI Hub. Using a multi-model approach to create vector embeddings based on contextual data of different media types like text and images allows a developer to provide a wide array of information to a chat model. Using CAP and the JavaScript SDK, AI capabilities can be exposed via CAP application services. This demo can highlight the aspects of generative AI and how a developer can provide vector embeddings to a chat model but also shows how the AI capabilities can be consumed and exposed using CAP.
 
-  
-**OR** Link to the Tutorial Navigator for example...
+### Build a Chatbot with Build Apps & AI Core
 
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
+Integrate SAP AI Core with SAP Build Apps to build a custom Chatbot. Walk through the steps of creating a deployment from SAP AI Launchpad. Show BTP destination created from the cockpit and describe the significance of additional properties. From Build Apps, show the data entity created, the app variable, page variable and data variable. From the UI Canvas, show the controls involved in creating the chatbot user interface, how various controls are bound to the variables and explain the logic attached to the button along with how formula works. Finally, show a demo of a working chatbot from the web preview.
 
-**IMPORTANT**
+### CDS Plugin Concept in CAP
 
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
+While CAP provides a wonderful set of layers allowing the developer to focus on the "what", not the "how", it often does help to know what's going on underneath.
+
+There are two key skills that every developer can and should cultivate: RTFM-fu, and curiosity. In this session we'll focus on curiosity, and feel our way into how the CDS plugin concept works, creating a simple plugin called "loud" that will uppercase the string content of elements that we annotate.
+
+This session is in two parts:
+
+* Part 1 - understanding how the CDS plugin mechanism operates, and using that knowledge to start creating our own plugin.
+
+* Part 2 - learning how to introspect the service information so we can inject the custom behaviour that we want our plugin to provide.
+
+Along the way, we'll learn about the DEBUG environment variable, the REPL, NPM workspaces, custom loggers, JavaScript features like the rest operator and destructuring, and introspecting CDS service definitions, down through the entities to the elements and their properties.
+
+### Pluggable "cds add" feature of SAP CAP (cds8)
+
+The new version of SAP CAP (cds8) made the API to create plugins for the "cds add" command public. This creates the opportunity to build reuseable plugins for frequently used commands and operations. One idea could be to implement a curl equivalent of the "cds add http" command, meaning the creation of sample curl scripts to test the service endpoints. This could be a really short demo of 1-2min, but could also be stretched to 5-10min if needed.
+
+[https://cap.cloud.sap/docs/releases/jun24#pluggable-cds-add](https://cap.cloud.sap/docs/releases/jun24#pluggable-cds-add)
+
+### ABAP CDS to List Report
+
+Explore how modern ABAP can be used to create a Fiori Element List report.
+
+This demo will highlight modern ABAP Development in ABAP Cloud using ABAP CDS, enriched with Annotations and Associations to create a full stack UI application. This will touch base how ABAP artifacts will be created in ADT and deployed using BAS thus highlighting the end-to-end app development
+
+### Joule Capabilities for ABAP Developers
+
+Has to be seen to be believed.
+
+### Custom SAP S/4HANA events to SAP Integration Suite, advanced event mesh
+
+In this demo, we will explore how you can create Derived Business Events using the RESTful ABAP Programming (RAP) model to extend the out-of-the-box Customer Material events available in SAP S/4HANA Cloud so that we can include additional data in the events generated by the system. Also, we will see the event filtering mechanism available in SAP S/4HANA Cloud, which leverages the custom extension attributes we define in our custom event. Finally, we will combine the SAP S/4HANA Cloud enterprise event enablement functionality with SAP Integration Suite, advanced event mesh (AEM) to publish dynamic topics in AEM by utilizing the custom extension attributes defined in the RAP data definition.
+
+### Full-stack app following the SAP BTP Developer's Guide
+
+The easy-ui5 project generator (open source) is a great tool to kickstart UI5 projects. It now also includes a subgenerator for SAP CAP projects, so developers can create a full-stack app that is instantly deployable to SAP BTP within a few minutes. There is no more manual work required when it comes to proxys, the approuter, destinations or the mta.yaml (previously that was quite the hassle). The generated full-stack app follows the suggestions from the SAP BTP Developer's Guide, using SAP CAP, UI5/Fiori elements and SAP BTP.
+
+
 
 ## Contributing
+
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
 
 ## Code of Conduct
+
 Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples/.github/blob/main/CODE_OF_CONDUCT.md).
 
 ## How to obtain support
@@ -44,4 +75,5 @@ Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
 
 ## License
+
 Copyright (c) 2024 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
