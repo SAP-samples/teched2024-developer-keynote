@@ -22,7 +22,7 @@ One of the many great aspects of the SAP Cloud Application Programming Model is 
 
 #### Pluggable "cds add" feature of SAP CAP (cds8)
 
-The new version of SAP CAP (cds8) made the API to create plugins for the "cds add" command public. This creates the opportunity to build reuseable plugins for frequently used commands and operations. One idea could be to implement a curl equivalent of the "cds add http" command, meaning the creation of sample curl scripts to test the service endpoints. This could be a really short demo of 1-2min, but could also be stretched to 5-10min if needed.
+The new version of SAP CAP (cds8) made the API to create plugins for the `cdd add <feature>` command public. This creates the opportunity to build reuseable plugins for frequently used commands and operations. In this demo, we implement a curl equivalent of the `cds add http` command, which will add sample curl scripts to our CAP project. These script can be used to test the service endpoints.
 
 [https://cap.cloud.sap/docs/releases/jun24#pluggable-cds-add](https://cap.cloud.sap/docs/releases/jun24#pluggable-cds-add)
 
