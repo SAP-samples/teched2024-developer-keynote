@@ -1,0 +1,5 @@
+scenario,scenarioDesc
+s_backup,Backup Scenario
+s_text,Text Only Model
+s_image,Text and Image Model
+s_test,Test Usage Only

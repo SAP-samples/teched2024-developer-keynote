@@ -1,0 +1,14 @@
+@server = http://localhost:4004
+@auth = Authorization: Basic alice:
+
+
+### UIDocumentationHelperService.DocumentSplits
+GET {{server}}/odata/v4/uidocumentation-helper/DocumentSplits
+Content-Type: application/json
+{{auth}}
+
+
+### UIDocumentationHelperService.RAGResponses
+GET {{server}}/odata/v4/uidocumentation-helper/RAGResponses
+Content-Type: application/json
+{{auth}}

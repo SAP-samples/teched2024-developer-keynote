@@ -1,0 +1,5 @@
+scenario,locale,scenarioDesc
+s_backup,de,Backup-Szenario
+s_text,de,Nur-Text-Modell
+s_image,de,Text- und Bildmodell
+s_test,de,Nur zu Testzwecken
