@@ -1,0 +1,19 @@
+{
+    "name": "teched2024.fullstack",
+    "scripts": {
+        "build": "mbt build --mtar teched2024.fullstack.mtar",
+        "build:workspaces": "npm run build --workspaces --if-present",
+        "deploy": "cf deploy mta_archives/teched2024.fullstack.mtar --retries 0",
+        "lint": "npm run lint --workspaces --if-present",
+        "ui5lint": "npm run ui5lint --workspaces --if-present",
+        "start:uimodule": "npm start --workspace uimodule",
+        "start:server": "npm start --workspace server"
+    },
+    "dependencies": {
+        "mbt": "^1"
+    },
+    "workspaces": [
+        "uimodule",
+        "server"
+    ]
+}

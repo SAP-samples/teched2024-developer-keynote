@@ -1,0 +1,22 @@
+{
+    "welcomeFile": "/index.html",
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": "/odata/v4/catalog/(.*)",
+            "destination": "server",
+            "authenticationType": "none"
+        },
+        {
+            "source": "/user-api/currentUser$",
+            "target": "/currentUser",
+            "service": "sap-approuter-userapi"
+        },
+        {
+            "source": "^(.*)$",
+            "target": "$1",
+            "service": "html5-apps-repo-rt",
+            "authenticationType": "xsuaa"
+        }
+    ]
+}

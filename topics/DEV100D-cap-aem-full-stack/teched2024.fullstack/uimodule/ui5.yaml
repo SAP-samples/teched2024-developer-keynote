@@ -1,0 +1,47 @@
+specVersion: "3.1"
+metadata:
+  name: uimodule
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        ignoreCertError: false
+        ui5:
+          path:
+            - /resources
+            - /test-resources
+          url: https://ui5.sap.com
+        backend:
+          - path: /odata/v4/catalog/
+            url: http://localhost:4004
+    - name: fiori-tools-appreload
+      afterMiddleware: compression
+      configuration:
+        port: 35729
+        path: webapp
+        delay: 300
+    - name: preview-middleware
+      afterMiddleware: compression
+      configuration:
+        flp:
+          path: /test/flpSandbox.html
+        test:
+          - framework: Qunit
+builder:
+  customTasks:
+    - name: ui5-task-zipper
+      afterTask: generateVersionInfo
+      configuration:
+        onlyZip: true
+        relativePaths: true
+        archiveName: uimodule-content
+framework:
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: themelib_sap_horizon
+    - name: sap.fe.templates
+  name: SAPUI5
+  version: 1.128.1
