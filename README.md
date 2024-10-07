@@ -6,9 +6,11 @@ Hear from the developer advocates for a quick injection of news, recaps, and dee
 
 ## Topics
 
-### JavaScript SDK & SAP Gen AI Hub
+### SAP Cloud SDK for AI (JavaScript) & SAP Gen AI Hub
 
-The JavaScript SDK allows developers to seamlessly integrate into SAP generative AI Hub. Using a multi-model approach to create vector embeddings based on contextual data of different media types like text and images allows a developer to provide a wide array of information to a chat model. Using CAP and the JavaScript SDK, AI capabilities can be exposed via CAP application services. This demo can highlight the aspects of generative AI and how a developer can provide vector embeddings to a chat model but also shows how the AI capabilities can be consumed and exposed using CAP.
+The SAP Cloud SDK for AI (JavaScript SDK) allows developers to seamlessly integrate into SAP generative AI Hub. Using a multi-model approach to create vector embeddings based on contextual data of different media types like text and images allows a developer to provide a wide array of information to a chat model. Using CAP and the JavaScript SDK, AI capabilities can be exposed via CAP application services. This demo can highlight the aspects of generative AI and how a developer can provide vector embeddings to a chat model but also shows how the AI capabilities can be consumed and exposed using CAP.
+
+[https://github.com/SAP/ai-sdk-js](https://github.com/SAP/ai-sdk-js)
 
 ### Build a Chatbot with Build Apps & AI Core
 

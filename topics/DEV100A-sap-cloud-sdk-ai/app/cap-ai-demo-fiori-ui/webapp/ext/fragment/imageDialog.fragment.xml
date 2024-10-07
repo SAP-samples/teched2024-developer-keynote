@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m"
+  xmlns:core="sap.ui.core" 	xmlns:image="sap.suite.ui.commons.imageeditor" core:require="{handler: 'capaidemofioriui/ext/objectController/objectController'}">
+  <Dialog id="imageDialog" title="{i18n>imageDialog}" verticalScrolling="false" stretch="true">
+
+
+  <image:ImageEditorContainer id="editor" enabledButtons="Transform,Filter,Crop">
+		<image:ImageEditor id="image" src="{path: 'image'}" />
+	</image:ImageEditorContainer>
+
+    <buttons>
+      <Button id="btnCloseImage" text="{i18n>dialogCloseButtonText}" type="Reject" press="handler.onCloseDialog"/>
+    </buttons>
+  </Dialog>
+</core:FragmentDefinition>

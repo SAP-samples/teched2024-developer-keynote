@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m"
+  xmlns:core="sap.ui.core" core:require="{handler: 'capaidemofioriui/ext/listController/listController'}">
+  <Dialog id="requestDialog" title="{i18n>dialog}" contentWidth="300px">
+  <ComboBox
+        id="scenarioCombo"
+        placeholder="{i18n>EnterScenario}"
+        required="true"
+				showSecondaryValues= "true"
+				items="{
+					path: '/scenarios',
+					sorter: { path: 'scenarioDesc' }
+				}">
+				<core:ListItem id="scenarioItem" key="{scenario}" text="{scenarioDesc}" additionalText = "{scenario}"/>
+			</ComboBox>
+
+    <TextArea id="requestInput" required="true" placeholder="{i18n>EnterRequest}" editable="true" width="100%" growing="true"/>
+
+    <buttons>
+      <Button id="btnClose" text="{i18n>dialogCloseButtonText}" type="Reject" press="handler.onCloseDialog"/>
+      <Button id="btnSubmit" text="{i18n>dialogOnSubmitButtonText}" type="Accept" press="handler.onSubmitDialog"/>
+    </buttons>
+  </Dialog>
+</core:FragmentDefinition>

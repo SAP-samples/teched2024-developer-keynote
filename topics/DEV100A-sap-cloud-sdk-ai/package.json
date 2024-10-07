@@ -1,0 +1,53 @@
+{
+  "name": "teched2024-cap-ai-demo",
+  "version": "1.1.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@cap-js/hana": "^1",
+    "@langchain/community": "^0.3.3",
+    "@langchain/core": "^0.3.3",
+    "@langchain/textsplitters": "0.1.0",
+    "@sap-ai-sdk/langchain": "^1.0.0",
+    "@sap/cds": "^8",
+    "@sap/cds-common-content": "^2.1.0",
+    "@sap/cds-fiori": "^1.2.7",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4",
+    "langchain": "^0.1.36",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/eslint-plugin-cds": "^3",
+    "@sap/ux-specification": "^1.124.2",
+    "dotenv": "^16.4.5",
+    "eslint": "^9"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "hana": "cds deploy --to hana:teched24-cap-ai-hdi --auto-undeploy",
+    "watch": "cds watch --profile hybrid --livereload false",
+    "build": "cds build --production",
+    "watch-cap-ai-demo-fiori-ui": "cds watch --open cap-ai-demo-fiori-ui/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "i18n": {
+      "folders": [
+        "i18n"
+      ]
+    },
+    "requires": {
+      "[hybrid]": {
+        "db": "hana"
+      }
+    }
+  },
+  "sapux": [
+    "app/cap-ai-demo-fiori-ui"
+  ]
+}

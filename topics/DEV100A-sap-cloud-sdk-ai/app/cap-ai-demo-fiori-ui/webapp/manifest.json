@@ -1,0 +1,169 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "capaidemofioriui",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.14.4",
+      "toolsId": "863782db-a110-424d-bad4-e2ef764e4f33"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/uidocumentation-helper/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.128.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ushell": {},
+        "sap.fe.templates": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "capaidemofioriui.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "RAGResponsesList",
+          "target": "RAGResponsesList"
+        },
+        {
+          "pattern": "RAGResponses({key}):?query:",
+          "name": "RAGResponsesObjectPage",
+          "target": "RAGResponsesObjectPage"
+        }
+      ],
+      "targets": {
+        "RAGResponsesList": {
+          "type": "Component",
+          "id": "RAGResponsesList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/RAGResponses",
+              "variantManagement": "Page",
+              "navigation": {
+                "RAGResponses": {
+                  "detail": {
+                    "route": "RAGResponsesObjectPage"
+                  }
+                }
+              },
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable"
+                  }
+                }
+              },
+              "content": {
+                "header": {
+                  "actions": {
+                    "listController": {
+                      "press": "capaidemofioriui.ext.listController.listController.handleNewRAGRequest",
+                      "visible": true,
+                      "enabled": true,
+                      "requiresSelection": false,
+                      "text": "Create New RAG Request"
+                    }
+                  }
+                }
+              },
+              "initialLoad": "Enabled"
+            }
+          }
+        },
+        "RAGResponsesObjectPage": {
+          "type": "Component",
+          "id": "RAGResponsesObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/RAGResponses",
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.FieldGroup#GeneratedGroup": {
+                  "actions": {
+                    "objectController": {
+                      "press": "capaidemofioriui.ext.objectController.objectController.displayImage",
+                      "visible": true,
+                      "enabled": true,
+                      "requiresSelection": false,
+                      "text": "Display Image"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
+}
