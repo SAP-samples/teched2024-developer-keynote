@@ -7,9 +7,6 @@ For example, you can create free [trial user](https://developers.sap.com/tutoria
 - You have created an [ABAP Cloud project](https://developers.sap.com/tutorials/abap-environment-create-abap-cloud-project.html)
 - Make sure, your system has the ABAP flight reference scenario. If your system hasn’t this scenario. You can download it [here](https://github.com/SAP-samples/abap-platform-refscen-flight). The trial systems have the flight scenario included.
 
-## Introduction
-You find the code snippets of CDS View entity and Metadata Extension file to create a Fiori List Report from ADT
-
 ### Create Package.  
 1. In ADT, go to the Project Explorer, right-click on the package ZLOCAL, and select New > ABAP Package from the context menu.
 2. Maintain the required information and click finish
@@ -134,7 +131,7 @@ define view entity ZDEV100C_CDS_XXX
 
 ![Metadata](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100C-abap-cds-list-report/images/metadata.png) 
 
-3. Replace the default code with the below code snippet 
+3. Replace the default code with the below code snippet and use the data definition that you created
  <pre lang ="ABAP">
  @Metadata.layer: #CORE
 @UI: {
@@ -189,13 +186,15 @@ annotate view ZDEV100C_CDS_XXX with
 
 ![Definition](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100C-abap-cds-list-report/images/definition.png)  
 
-3. Replace the default code with the below code snippet 
+3. Replace the default code with the below code snippet and use the data definition that you created
  <pre lang ="ABAP">
  @EndUserText.label: 'Service definition for travel'
 define service ZDEVC100_TRA_XXX {
   expose ZDEV100C_CDS_XXX;
 }
 </pre>  
+
+4. Save and activate the changes.
 
 ### Service Binding
 1. Right-click your Service Definition and select New Service Binding from the context menu.
