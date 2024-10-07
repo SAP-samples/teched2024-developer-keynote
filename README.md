@@ -26,9 +26,9 @@ The new version of SAP CAP (cds8) made the API to create plugins for the `
 
 [https://cap.cloud.sap/docs/releases/jun24#pluggable-cds-add](https://cap.cloud.sap/docs/releases/jun24#pluggable-cds-add)
 
-#### Understanding how the CDS plugin concept works
+#### Understanding how the CAP plugin concept works
 
-This demo, called "CDS plugins deconstructed", is about CAP extensibility for use at runtime, using the [CDS plugin](https://cap.cloud.sap/docs/node.js/cds-plugins) concept.
+This demo, called "CAP plugins deconstructed", is about CAP extensibility for use at runtime, using the [CDS plugin](https://cap.cloud.sap/docs/node.js/cds-plugins) concept.
 
 While CAP provides a wonderful set of layers allowing the developer to focus on the "what", not the "how", it often does help to know what's going on underneath.
 
