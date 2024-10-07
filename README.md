@@ -14,25 +14,37 @@ The JavaScript SDK allows developers to seamlessly integrate into SAP generative
 
 Integrate SAP AI Core with SAP Build Apps to build a custom Chatbot. Walk through the steps of creating a deployment from SAP AI Launchpad. Show BTP destination created from the cockpit and describe the significance of additional properties. From Build Apps, show the data entity created, the app variable, page variable and data variable. From the UI Canvas, show the controls involved in creating the chatbot user interface, how various controls are bound to the variables and explain the logic attached to the button along with how formula works. Finally, show a demo of a working chatbot from the web preview.
 
-### CDS Plugin Concept in CAP
+### CAP Extensibility
 
-While CAP provides a wonderful set of layers allowing the developer to focus on the "what", not the "how", it often does help to know what's going on underneath.
+One of the many great aspects of the SAP Cloud Application Programming Model is its extensibility, both for work at design time, and for use at runtime too. There are two live demos on CAP extensibility, reflecting these two phases.
 
-There are two key skills that every developer can and should cultivate: RTFM-fu, and curiosity. In this session we'll focus on curiosity, and feel our way into how the CDS plugin concept works, creating a simple plugin called "loud" that will uppercase the string content of elements that we annotate.
-
-This session is in two parts:
-
-* Part 1 - understanding how the CDS plugin mechanism operates, and using that knowledge to start creating our own plugin.
-
-* Part 2 - learning how to introspect the service information so we can inject the custom behaviour that we want our plugin to provide.
-
-Along the way, we'll learn about the DEBUG environment variable, the REPL, NPM workspaces, custom loggers, JavaScript features like the rest operator and destructuring, and introspecting CDS service definitions, down through the entities to the elements and their properties.
-
-### Pluggable "cds add" feature of SAP CAP (cds8)
+#### Pluggable "cds add" feature of SAP CAP (cds8)
 
 The new version of SAP CAP (cds8) made the API to create plugins for the "cds add" command public. This creates the opportunity to build reuseable plugins for frequently used commands and operations. One idea could be to implement a curl equivalent of the "cds add http" command, meaning the creation of sample curl scripts to test the service endpoints. This could be a really short demo of 1-2min, but could also be stretched to 5-10min if needed.
 
 [https://cap.cloud.sap/docs/releases/jun24#pluggable-cds-add](https://cap.cloud.sap/docs/releases/jun24#pluggable-cds-add)
+
+#### Understanding how the CDS plugin concept works
+
+This demo, called "CDS plugins deconstructed", is about CAP extensibility for use at runtime, using the [CDS plugin](https://cap.cloud.sap/docs/node.js/cds-plugins) concept.
+
+While CAP provides a wonderful set of layers allowing the developer to focus on the "what", not the "how", it often does help to know what's going on underneath.
+
+There are two key skills that every developer can and should cultivate: [RTFM](https://en.wikipedia.org/wiki/RTFM)-[fu](https://en.wiktionary.org/wiki/-fu), and curiosity. In this session we'll focus on curiosity, and feel our way into how the CDS plugin concept works, eventually creating a simple plugin called "loud" that will uppercase the string content of elements that we annotate.
+
+There are actually three parts to this journey:
+
+1. Deconstructing the plugin scaffolding and mechanism, so we have a good understanding of what we need to do
+1. Learning how to use introspection in the REPL to explore the service and its contents, so we know how to dynamically explore service, entities, elements and annotations in our plugin logic
+1. Writing the actual plugin, with the knowledge gained in the first two parts
+
+Along the way, we'll learn about the DEBUG environment variable, the REPL, NPM workspaces, custom loggers, JavaScript features like the rest operator and destructuring, and introspecting CDS service definitions, down through the entities to the elements and their properties.
+
+The live demo at SAP TechEd Virtual 2024 covers the first part of the journey. Code used for the live demo can be found in the corresponding directory in this repo, [DEV100B-cds-plugins-deconstructed](topics/cds-plugins-deconstructed/).
+
+Let us know if you want us to take you through the second and third parts!
+
+There's also a blog post accompanying part 1: [CAP plugins deconstructed - part 1 - understanding how the mechanism works](https://qmacro.org/blog/posts/2024/10/05/cap-plugins-deconstructed-part-1-understanding-how-the-mechanism-works/).
 
 ### ABAP CDS to List Report
 
