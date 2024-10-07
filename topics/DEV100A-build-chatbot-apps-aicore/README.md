@@ -20,7 +20,7 @@
 
 6. Assign relevant role collections to your user from Security > Users in the BTP cockpit as shown below.
    
-    ![Role Collections](/images/user-role-collections-ai-core-launchpad.png)
+    ![Role Collections](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100A-build-chatbot-apps-aicore/images/user-role-collections-ai-core-launchpad.png)
 
 7. Create an AI API connection with the details from SAP AI Core service key. Select **default** as Resource Group.
     
@@ -35,7 +35,7 @@
         <li>Get the deploymentUrl and this deployment url can be used to query the AI model. The current status of the deployment should be running. Note down the deployment url since you will need it while configuring the data entity from SAP Build Apps</li>
     </ol>
 
-    ![Deployment status running](/images/deployment-status-running.png)
+    ![Deployment status running](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100A-build-chatbot-apps-aicore/images/deployment-status-running.png)
 
 
 ## Set up a destination in the BTP Cockpit for AI Core
@@ -44,7 +44,7 @@
  2. Under Connectivity > Destinations, set up a new destination(for eg: **ai-core**).
  3. Get the SAP AI Core keys from **Instances and Subscriptions** tab > **Instances** > **1 key**. 
 
-  ![AI Core instance key ](/images/servicekey-ai-core-instance.png)
+  ![AI Core instance key ](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100A-build-chatbot-apps-aicore/images/servicekey-ai-core-instance.png)
 
  A sample given below for reference.
    
@@ -79,7 +79,7 @@
  3. From the Data tab, create a data entity with name as **SAP_AI** and choose destination as **ai-core**(ie. use the same name used to create a destination in the previous step of destination configuration from the dropdown).
  4. Add a Resource Schema with **messages** as a list of objects with **role** and **content** as the properties.
    
-    ![Resource schema messages](/images/dataentity-input-format.png)
+    ![Resource schema messages](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100A-build-chatbot-apps-aicore/images/dataentity-input-format.png)
 
  5. Enable the **Create** method and from the Config tab, provide relative path of the deployment url which looks like this **/inference/deployments/abcdedfgh/**. Append **chat/completions?api-version=2023-05-15** to it and use **POST** method.
  6. From the Test tab, provide values for **role** as **user** and **content** as **What is SAP BTP?**, then click **Run test**, once you get **200 OK**, set schema from response and then Save the data entity.
@@ -91,7 +91,7 @@
  12. Delete the default elements on the page and add a **Large image list item component**.
  13. Select the **Large image list item component** and from the properties pane, click on the **Component Editor Icon**.
    
-![Component Editor Icon](/images/component-editor-icon.png)
+![Component Editor Icon](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100A-build-chatbot-apps-aicore/images/component-editor-icon.png)
 
  15. Delete the Image from the **Large image list item component** and drag and drop an icon in its place.
  16. Add an **input** field on the canvas below the **Large image list item**  and remove the label from the properties panel.
@@ -127,7 +127,7 @@ On button tap, since we append the user input to the history variable and later 
 
  25.  At the end of the setting up of the logic, it should appear like so
    
-![Logic canvas](/images/logic-canvas-button-logic.png)
+![Logic canvas](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100A-build-chatbot-apps-aicore/images/logic-canvas-button-logic.png)
     
  26.  Launch the App to Preview and test.
 
