@@ -1,0 +1,11 @@
+{
+	"name": "cds-plugin-amqp",
+	"version": "0.0.1",
+	"dependencies": {
+		"@sap/xb-msg-amqp-v100": "^0.9.58",
+		"amqp10": "^3.6.0"
+	},
+	"peerDependencies": {
+		"@sap/cds": ">=6.8.2"
+	}
+}

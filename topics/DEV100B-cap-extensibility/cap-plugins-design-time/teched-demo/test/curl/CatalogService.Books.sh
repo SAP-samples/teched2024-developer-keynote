@@ -1,0 +1,1 @@
+curl http://localhost:4004/odata/v4/catalog/Books

@@ -1,0 +1,8 @@
+{
+  "name": "cds-add-curl",
+  "version": "1.0.0",
+  "main": "cds-plugin.js",
+  "dependencies": {
+    "@sap/cds-dk": "^8.1.2"
+  }
+}

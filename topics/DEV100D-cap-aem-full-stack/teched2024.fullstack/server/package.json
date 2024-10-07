@@ -1,0 +1,36 @@
+{
+	"name": "server",
+	"version": "1.0.0",
+	"description": "A simple CAP project.",
+	"repository": "<Add your repository here>",
+	"license": "UNLICENSED",
+	"private": true,
+	"dependencies": {
+		"@sap/cds": "^8",
+		"express": "^4",
+		"@sap/xssec": "^4",
+		"@cap-js/postgres": "^1",
+		"cds-plugin-demo-amqp": "file:../../cds-plugin-demo-amqp"
+	},
+	"devDependencies": {
+		"@cap-js/cds-types": "^0.6",
+		"@cap-js/sqlite": "^1",
+		"@sap/cds-dk": "^7",
+		"cds-plugin-ui5": "latest",
+		"uimodule": "../uimodule"
+	},
+	"scripts": {
+		"start": "cds-serve",
+		"dev": "cds watch",
+		"build": "cds build --production"
+	},
+	"cds": {
+		"requires": {
+			"amqp": {
+                "broker": "AEM",
+				"queue": "CustomerMaterial_CAP",
+				"entity": "CatalogService.CustomerMaterialChanges"
+			}
+		}
+	}
+}
