@@ -1,0 +1,15 @@
+{
+  "name": "plugins-deconstructed-starter",
+  "version": "0.0.1",
+  "description": "A minimal CAP starter project with a single services.cds file",
+  "dependencies": {
+    "@sap/cds": "^8",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  }
+}
