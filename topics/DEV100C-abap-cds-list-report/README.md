@@ -222,3 +222,9 @@ The first step is to configure the integration between ADT and SAP Fiori tools. 
 Check the [blog post](https://community.sap.com/t5/technology-blogs-by-sap/sap-fiori-tools-may-2024-release-adds-closer-integration-with-abap/ba-p/13720761)  on how to configure for the integration between ADT and SAP Fiori tools  
 
 ![BAS](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100C-abap-cds-list-report/images/bas.png)
+  
+### Further Reading
+
+[Create a Travel App with SAP Fiori Elements Based on OData V4 RAP Service](https://developers.sap.com/group.fiori-tools-odata-v4-travel.html)
+
+[SAP Developers ](https://www.youtube.com/@sapdevs)
