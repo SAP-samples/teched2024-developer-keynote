@@ -12,6 +12,38 @@ You find the code snippets of CDS View entity and Metadata Extension file to cre
 
 ### Steps
 1. Create Package.  
-In ADT, go to the Project Explorer, right-click on the package ZLOCAL, and select New > ABAP Package from the context menu.
-2. Maintain the required information and click finish
+In ADT, go to the Project Explorer, right-click on the package ZLOCAL, and select New > ABAP Package from the context menu. Maintain the required information and click finish
+
 ![Package](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100C-abap-cds-list-report/images/package.png)
+
+2. Create database table to store the Travel data. A Travel entity defines general travel data, such as the description, overall status of the travel booking, and the price of travel.  
+Select a transport request, and click Finish to create the database table.
+  
+![Table](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100C-abap-cds-list-report/images/table.png)  
+   
+3. Replace the default code with the code snippet provided and rename to the table that you have provided.
+
+<pre lang="ABAP">
+@EndUserText.label : 'Database table for travel data'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zdev100c_tra_xxx {
+
+  key client    : abap.clnt not null;
+  key travel_id : /dmo/travel_id not null;
+  description   : /dmo/description;
+  @Semantics.amount.currencyCode : '/dmo/travel_data.currency_code'
+  total_price   : /dmo/total_price;
+  currency_code : /dmo/currency_code;
+  status        : abap.char(20);
+
+}
+</pre>
+Save and activate the changes.  
+
+
+
+
+
