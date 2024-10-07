@@ -40,7 +40,7 @@ There are actually three parts to this journey:
 
 Along the way, we'll learn about the DEBUG environment variable, the REPL, NPM workspaces, custom loggers, JavaScript features like the rest operator and destructuring, and introspecting CDS service definitions, down through the entities to the elements and their properties.
 
-The live demo at SAP TechEd Virtual 2024 covers the first part of the journey. Code used for the live demo can be found in the corresponding directory in this repo, [DEV100B-cds-plugins-deconstructed](topics/cds-plugins-deconstructed/).
+The live demo at SAP TechEd Virtual 2024 covers the first part of the journey. Code used for the live demo can be found in the corresponding directory in this repo, [DEV100B-cds-plugins-deconstructed](https://github.com/SAP-samples/teched2024-developer-keynote/tree/main/topics/DEV100B-cap-extensibility/cds-plugins-deconstructed).
 
 Let us know if you want us to take you through the second and third parts!
 
