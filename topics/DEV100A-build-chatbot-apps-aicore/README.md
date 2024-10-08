@@ -86,9 +86,9 @@
  7.  Go to the UI Canvas, switch to **Variables** tab.
  8.  Create an app variable **history** as a list of objects with **role** and **content** as properties with text as the data type and remove the **id** field.
  9.  Create a page variable **input** with type as text.
- 10. Create a data variable **SAP_AI** and leave the defaults selected.
+ 10. Create a data variable from the data entity **SAP_AI** and leave the defaults selected.
  11. Switch to the UI Canvas > **View** tab.
- 12. Delete the default elements on the page and add a **Large image list item component**.
+ 12. Delete the default elements on the page and drag and drop a **Large image list item component** on to the canvas.
  13. Select the **Large image list item component** and from the properties pane, click on the **Component Editor Icon**.
    
 ![Component Editor Icon](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100A-build-chatbot-apps-aicore/images/component-editor-icon.png)
@@ -143,11 +143,11 @@ On button tap, since we append the user input to the history variable and later 
     IF(repeated.current.role == "user", "user", "android")
    ```
 
-   This formula shows the **user** icon if the current role is user and **android** icon if the current role is assistant.
+   This formula shows the **user** icon, if the current role is user and **android** icon if the current role is assistant.
  
-4. To change the background of the row color to appear visually different for user vs bot, click on the **Large image list item** and go to the Style tab.
+4. To change the background of the row color to appear visually different for user vs bot, click on the **Large image list item**.
    
-5. Edit the Style class and click on the **LOCAL PALETTE**, choose **NEW PALETTE** on the menu and on the Formula tab, enter the below formula
+5.  Go to the Style tab and edit the Style class and click on the **LOCAL PALETTE**, choose **NEW PALETTE** on the menu and on the Formula tab, enter the below formula
 
     ```
         IF(repeated.current.role == "user", "#F1F1F2", "#F6FFFF")
