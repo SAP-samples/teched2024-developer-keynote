@@ -10,7 +10,7 @@
     - https://developers.sap.com/tutorials/ai-core-launchpad-provisioning.html
     - https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/create-service-instance
 
-4. View the service Key and download it. You will need the service key credentials to connect to AI Core from the AI Launchpad as well as to create a BTP destination.
+4. View the service key and download it. You will need the service key credentials to connect to AI Core from the AI Launchpad as well as to create a BTP destination.
    
 5. You would need a client to access SAP AI Core runtime, and here we use AI Launchpad as the client to configure the deployment. Use the below tutorials to setup the AI Launchpad.
 
@@ -93,12 +93,12 @@
    
 ![Component Editor Icon](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100A-build-chatbot-apps-aicore/images/component-editor-icon.png)
 
- 15. Delete the Image from the **Large image list item component** and drag and drop an icon in its place.
+ 15. Delete the **Image** from the **Large image list item component** and drag and drop an **Icon** in its place.
  16. Add an **input** field on the canvas below the **Large image list item**  and remove the label from the properties panel.
  17. Add a **button** field under the **Large image list item** component. Change button field Label to **Send** in the **properties** tab.
  18. Select the **Large image list item** component on the canvas and bind the **Repeat With** to App variable -> **history** and **title** and **description** fields to **role** and **content** respectively.
  19. Bind the input field to the page variable **input**.
- 20. Open the logic canvas by choosing the button field on the canvas and clicking the link at the bottom.
+ 20. Open the **logic canvas** by choosing the button field on the canvas and clicking the link at the bottom.
  21. On component tap of the button, set app variable to history with value as a formula.  
    
         ```
@@ -112,7 +112,7 @@ Due to the above formula, the user input stored in the pageVars.input and since 
             {"messages": appVars.history }
         ```
 
-On button tap, since we append the user input to the history variable and later after getting the AI response, append the response role and content to the history variable, the entire chat history is sent to the generative AI hub via the **Create Record** function. Since the generative AI hub has the context, it will respond with context relevant answers.
+On button tap, since we append the user input to the history variable and later after getting the AI response, append the role and content from the response to the history variable, the entire chat history is sent to the generative AI hub via the **Create Record** function. Since the generative AI hub has the context, it will respond with context relevant answers.
 
  23.  After the success of **Create Record** flow function, set the app variable to history with value as a formula below. 
 
@@ -135,7 +135,7 @@ On button tap, since we append the user input to the history variable and later 
 
 1. Select the **Page Layout** component from the **Tree** view and from the **Style** tab, change the background color to the color of your choice. The background color chosen in this example is #36454F, the hex code for charcoal black.
 
-2. To change the icon to appear visually different for user vs bot, select the **Large image list item** on the canvas and click on the Component editor icon.
+2. To change the icon to appear visually different for user vs bot, select the **Large image list item** on the canvas and click on the **component template editor** icon.
    
 3. Select on the icon on the canvas and from the properties tab, under icon -> formula, enter the formula as
    
