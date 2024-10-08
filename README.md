@@ -16,6 +16,8 @@ The SAP Cloud SDK for AI (JavaScript SDK) allows developers to seamlessly integr
 
 Integrate SAP AI Core with SAP Build Apps to build a custom Chatbot. Walk through the steps of creating a deployment from SAP AI Launchpad. Show BTP destination created from the cockpit and describe the significance of additional properties. From Build Apps, show the data entity created, the app variable, page variable and data variable. From the UI Canvas, show the controls involved in creating the chatbot user interface, how various controls are bound to the variables and explain the logic attached to the button along with how formula works. Finally, show a demo of a working chatbot from the web preview.
 
+Link to the topic folder: https://github.com/SAP-samples/teched2024-developer-keynote/tree/main/topics/DEV100A-build-chatbot-apps-aicore
+
 ### CAP Extensibility
 
 One of the many great aspects of the SAP Cloud Application Programming Model is its extensibility, both for work at design time, and for use at runtime too. There are two live demos on CAP extensibility, reflecting these two phases.
