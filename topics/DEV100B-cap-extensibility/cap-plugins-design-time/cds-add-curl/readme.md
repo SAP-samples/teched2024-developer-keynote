@@ -18,7 +18,7 @@ Installation in project scope:
 npm i cds-add-curl -D
 ```
 
-After installation, you can run the following command:
+After installation, you can run the following command in the CAP project:
 
 ```bash
 cds add curl
