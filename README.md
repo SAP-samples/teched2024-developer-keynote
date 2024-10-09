@@ -1,5 +1,7 @@
 # SAP TechEd 2024 Developer keynote [deconstructed]: Keeping the promise
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2024-developer-keynote)](https://api.reuse.software/info/github.com/SAP-samples/teched2024-developer-keynote)
+
 ## Description
 
 Hear from the developer advocates for a quick injection of news, recaps, and deep-dive demos covering various announcements from the event as well as other fun stuff.
