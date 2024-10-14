@@ -1,6 +1,8 @@
 {
   "name": "cds-add-curl",
   "version": "0.0.1",
+  "author": "nicolai.schoenteich@sap.com",
+  "repository": "https://github.com/SAP-samples/teched2024-developer-keynote/tree/main/topics/DEV100B-cap-extensibility/cap-plugins-design-time/cds-add-curl",
   "main": "cds-plugin.js",
   "dependencies": {
     "@sap/cds-dk": "^8.1.2"
