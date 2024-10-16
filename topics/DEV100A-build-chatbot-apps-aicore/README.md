@@ -10,7 +10,7 @@
     - https://developers.sap.com/tutorials/ai-core-launchpad-provisioning.html
     - https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/create-service-instance
 
-4. View the service key and download it. You will need the service key credentials to connect to AI Core from the AI Launchpad as well as to create a BTP destination.
+4. Create a service key and download it as shown here https://help.sap.com/docs/sap-ai-core/sap-ai-core-service-guide/create-service-key. You will need the service key credentials to connect to AI Core from the AI Launchpad as well as to create a BTP destination.
    
 5. You would need a client to access SAP AI Core runtime, and here we use AI Launchpad as the client to configure the deployment. Use the below tutorials to setup the AI Launchpad.
 
@@ -18,7 +18,7 @@
     - https://developers.sap.com/tutorials/ai-core-setup.html
     - https://help.sap.com/docs/ai-launchpad/sap-ai-launchpad/generative-ai-hub
 
-6. Assign relevant role collections to your user from Security > Users in the BTP cockpit as shown below.
+6. Assign relevant role collections to your user from Security > Users in the BTP cockpit as shown below. If you are don’t have apps (like SAP AI Core Administration and ML Operations) on the navigations pane of the AI Launchpad, it could be due to missing the required role rollections.
    
     ![Role Collections](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100A-build-chatbot-apps-aicore/images/user-role-collections-ai-core-launchpad.png)
 
@@ -27,7 +27,7 @@
 8. Create a Configuration and Deployment for the AI model.
    
     <ol type="a">
-        <li>Check foundation model is available under scenarios(will appear only if Extended Service Plan is chosen while creation of AI Core instance). The foundation model is pre-configured by SAP. </li>
+        <li>Check foundation model is available under scenarios(will appear only if **Extended** Service Plan is chosen while creation of AI Core instance). The foundation model is pre-configured by SAP. </li>
         <li>You could also create your own scenarios to train custom machine learning models or to serve your models(ie. deploy your model on AI core).</li>
         <li>Create a configuration as shown here
         https://developers.sap.com/tutorials/ai-core-generative-ai.html#cb63430f-b89e-4165-b1b3-13d65c84c2e2</li>
@@ -62,8 +62,8 @@
         }
     ```
 
- 5. Use the **AI_API_URL** from the service key in the URL field for eg: https://api.ai.prod.xy.aws.ml.hana.ondemand.com/v2.
- 6. Use the **url** field from the service key for the Token Service URL and append **/oauth/token** to the url in the destination configuration.
+ 5. Use the **AI_API_URL** from the service key in the URL field for eg: https://api.ai.prod.xy.aws.ml.hana.ondemand.com/v2. Please ensure you add the suffix **/v2** at the end of your URL as current SAP AI Core endpoint version is v2.
+ 6. Use the **url** field from the service key for the **Token Service URL** and append **/oauth/token** to the url in the destination configuration.
  7. Add additional properties shown below
     -  **AppgyverEnabled** to true
     -  **HTML5.DynamicDestination** to true
