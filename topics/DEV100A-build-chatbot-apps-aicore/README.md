@@ -99,12 +99,12 @@
  18. Select the **Large image list item** component on the canvas and bind the **Repeat With** to App variable -> **history** and **title** and **description** fields to **role** and **content** respectively.
  19. Bind the input field to the page variable **input**.
  20. Open the **logic canvas** by choosing the button field on the canvas and clicking the link at the bottom.
- 21. On component tap of the button, set app variable to history with value as a formula.  
+ 21. On component tap of the button, set the app variable history to the page variable input using the WITH_ITEM formula.  
    
         ```
             WITH_ITEM(appVars.history, { role: "user", content: pageVars.input })
         ```
-Due to the above formula, the user input stored in the pageVars.input and since the history variable is bound to the Large image list item, the user input reflects on user interface.
+Due to the above formula, the user input stored in the pageVars.input is appended to the history variable and the user input is reflected on the user interface due to the history variable already bound to the Large image list item.
 
  1.  Add a create record flow function, map the resource name to **SAP_AI** and record field to formula
    
@@ -114,14 +114,14 @@ Due to the above formula, the user input stored in the pageVars.input and since 
 
 On button tap, since we append the user input to the history variable and later after getting the AI response, append the role and content from the response to the history variable, the entire chat history is sent to the generative AI hub via the **Create Record** function. Since the generative AI hub has the context, it will respond with context relevant answers.
 
- 23.  After the success of **Create Record** flow function, set the app variable to history with value as a formula below. 
+ 23.  After the success of **Create Record** flow function, set the app variable history to the role and content from the Generative AI Hub response using the formula below. 
 
    
         ```
             WITH_ITEM(appVars.history, { role: outputs["Create record"].response.choices[0].message.role, content: outputs["Create record"].response.choices[0].message.content })
         ```
 
- The role and content from the backend response is fetched and appended to the app variable **history** using the **WITH_ITEM** formula.
+ The role and content from the backend response is fetched and appended to the app variable **history** using the **WITH_ITEM** formula and since the history variable is bound to the large image list item, the response now will reflect on the UI.
 
  24. Connect a page variable, map the **Variable name** to input(page variable). Set the **Assigned value** of the input to a blank space to reset the input field after the response is returned from the backend.
 
@@ -133,7 +133,7 @@ On button tap, since we append the user input to the history variable and later 
 
 ## Further Styling of the User Interface
 
-1. Select the **Page Layout** component from the **Tree** view and from the **Style** tab, change the background color to the color of your choice. The background color chosen in this example is #36454F, the hex code for charcoal black.
+1. Select the **Page Layout** component from the **Tree** view and from the **Style** tab, change the background color to the color of your choice. The background color chosen in this example is #36454F, the hex code for charcoal black. A custom color can be chosen by pasting the hex code in the NEW PALETTE.
 
 2. To change the icon to appear visually different for user vs bot, select the **Large image list item** on the canvas and click on the **component template editor** icon.
    
@@ -147,7 +147,7 @@ On button tap, since we append the user input to the history variable and later 
  
 4. To change the background of the row color to appear visually different for user vs bot, click on the **Large image list item**.
    
-5.  Go to the Style tab and edit the Style class and click on the **LOCAL PALETTE**, choose **NEW PALETTE** on the menu and on the Formula tab, enter the below formula
+5.  Go to the Style tab and edit the Style class, Select the Background color button and choose **NEW PALETTE** on the menu and on the Formula tab, enter the below formula
 
     ```
         IF(repeated.current.role == "user", "#F1F1F2", "#F6FFFF")
@@ -155,4 +155,8 @@ On button tap, since we append the user input to the history variable and later 
 
     This formula shows light grey color if the current role is user and light green color if the current role is assistant.
 
-6. Launch the App to Preview and test.
+6. To change the border corners to have a radius, while being on the same Style tab, Scroll to the SHAPE -> Corner radius and choose the type of rounding as required.
+   
+7. Select "NEW STYLE" button on top and give a name so as to preserve these styles as a new Style class
+   
+9. Launch the App to Preview and test.
