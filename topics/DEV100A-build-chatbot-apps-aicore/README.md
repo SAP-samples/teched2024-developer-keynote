@@ -1,4 +1,4 @@
-# Build a chatbot with SAP Build Apps and SAP AI Core
+![image](https://github.com/user-attachments/assets/f92ec99f-cdbc-43ba-a066-6d767d995de5)# Build a chatbot with SAP Build Apps and SAP AI Core
 
 ## Pre-steps
 
@@ -62,7 +62,7 @@
         }
     ```
 
- 5. Use the **AI_API_URL** from the service key in the URL field for eg: https://api.ai.prod.xy.aws.ml.hana.ondemand.com/v2. Please ensure you add the suffix **/v2** at the end of your URL as current SAP AI Core endpoint version is v2.
+ 5. Use the **AI_API_URL** from the service key in the **URL** field for eg: https://api.ai.prod.xy.aws.ml.hana.ondemand.com/v2. Please ensure you add the suffix **/v2** at the end of your URL as current SAP AI Core endpoint version is v2.
  6. Use the **url** field from the service key for the **Token Service URL** and append **/oauth/token** to the url in the destination configuration.
  7. Add additional properties shown below
     -  **AppgyverEnabled** to true
@@ -81,7 +81,7 @@
    
     ![Resource schema messages](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100A-build-chatbot-apps-aicore/images/dataentity-input-format.png)
 
- 5. Enable the **Create** method and from the Config tab, provide relative path of the deployment url which looks like this **/inference/deployments/abcdedfgh/**. Append **chat/completions?api-version=2023-05-15** to it and use **POST** method.
+ 5. Enable the **Create** method and from the Config tab, provide relative path of the deployment url  **/inference/deployments/abcdedfgh/** as a static text. Append **chat/completions?api-version=2024-06-01** to it and use **POST** method.
  6. From the Test tab, provide values for **role** as **user** and **content** as **What is SAP BTP?**, then click **Run test**, once you get **200 OK**, set schema from response and then Save the data entity.
  7.  Go to the UI Canvas, switch to **Variables** tab.
  8.  Create an app variable **history** as a list of objects with **role** and **content** as properties with text as the data type and remove the **id** field.
