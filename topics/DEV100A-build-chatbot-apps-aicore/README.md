@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f92ec99f-cdbc-43ba-a066-6d767d995de5)# Build a chatbot with SAP Build Apps and SAP AI Core
+# Build a chatbot with SAP Build Apps and SAP AI Core
 
 ## Pre-steps
 
