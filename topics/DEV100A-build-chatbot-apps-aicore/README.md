@@ -160,3 +160,16 @@ On button tap, since we append the user input to the history variable and later 
 7. Select "NEW STYLE" button on top and give a name so as to preserve these styles as a new Style class
    
 9. Launch the App to Preview and test.
+
+
+## Reference links
+
+1. Can we connect to the Generative AI Hub with clients other than AI Launchpad?
+   - Yes. you can use Postman, Python SDK, SAP AI Core Toolkit Extension in VS Code, AI Core SDK etc. Different options shown here in different tabs https://developers.sap.com/tutorials/ai-core-setup.html.
+2. Any reference links that explains the basics of Generative AI Hub,  Large Language Models, SAP AI Core, Launch pad etc?
+   - Video by Nora: https://www.youtube.com/watch?v=MEJJnzNjGKE&list=PL6RpkC85SLQCDxe58RfZaLCcPqcgwTIhj&index=11&ab_channel=SAPDevelopers		
+3. How to use custom machine learning models instead of the foundation models provided by SAP?
+   - Video by Dhrub: https://www.youtube.com/live/h3Xs862M-RU?si=gfAzKDN-RpYVr2xa
+   - Related tutorial: https://developers.sap.com/tutorials/ai-core-vs-code-toolkit.html
+4. Difference between Joule and AI foundation
+   - Blog post by Raja Gupta : https://community.sap.com/t5/technology-blogs-by-sap/generative-ai-with-sap-part-2-components-of-sap-business-ai/ba-p/13792752
