@@ -1,5 +1,10 @@
 # Build a chatbot with SAP Build Apps and SAP AI Core
 
+## Video Tutorial
+
+[![Chatbot Development made easy with SAP AI Core and Build Apps](https://img.youtube.com/vi/mE7nHx9XHAY/0.jpg)](https://www.youtube.com/watch?v=mE7nHx9XHAY)
+
+
 ## Pre-steps
 
 1. Create a BTP sub account in Free Tier (US East Region) Account(or if you have a commercial BTP Account use that account). You may follow the steps here to create the sub account https://developers.sap.com/tutorials/btp-free-tier-account..html.
