@@ -86,7 +86,7 @@
    
     ![Resource schema messages](https://github.com/SAP-samples/teched2024-developer-keynote/blob/main/topics/DEV100A-build-chatbot-apps-aicore/images/dataentity-input-format.png)
 
- 5. Enable the **Create** method and from the Config tab, provide relative path of the deployment url  **/inference/deployments/abcdedfgh/** as a static text. Append **chat/completions?api-version=2024-06-01** to it and use **POST** method.
+ 5. Enable the **Create** method and from the Config tab, provide relative path of the deployment url  **/inference/deployments/deploymentId/** as a static text. Append **chat/completions?api-version=2024-06-01** to it, so that the relative url is **/inference/deployments/deploymentId/chat/completions?api-version=2024-06-01** and use **POST** method.
  6. From the Test tab, provide values for **role** as **user** and **content** as **What is SAP BTP?**, then click **Run test**, once you get **200 OK**, click **Autodetect schema from response** and then **Save data entity**.
  7.  Go to the UI Canvas, switch to **Variables** tab.
  8.  Create an app variable **history** as a list of objects with **role** and **content** as properties with text as the data type and remove the **id** field.
